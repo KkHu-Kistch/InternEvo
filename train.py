@@ -28,7 +28,7 @@ def main(args):
     merged_args = {**vars(args), "dataset_types": dataset_types}
     trainer = TrainerBuilder(model, train_dl, val_dls, **merged_args)
 
-    # training test
+    # training
     trainer.fit()
 
 
