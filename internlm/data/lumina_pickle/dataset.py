@@ -43,7 +43,6 @@ class LuminaPickleDataset(Dataset):
             self.meta_list, self.record_list = self._load_data_yaml(data_yaml)
 
     def __len__(self) -> int:
-        print("Calling here")
         total_len = sum(meta["len"] for meta in self.meta_list)
         logger.info(f"debug {total_len=}")
         for meta in self.meta_list:
